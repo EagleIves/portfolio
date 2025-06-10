@@ -1,0 +1,15 @@
+### Import Python libraries
+To implement the work I envisioned for the customer segmentation analysis, I installed a few external python libraries. 
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.preprocessing import StandardScaler, LabelEncoder
+from sklearn.cluster import KMeans
+from sklearn.decomposition import PCA
+from sklearn.metrics import silhouette_score
+from mlxtend.frequent_patterns import apriori, association_rules
+from ydata_profiling import ProfileReport
+import warnings
+warnings.filterwarnings('ignore')
