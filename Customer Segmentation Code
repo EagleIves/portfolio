@@ -1,5 +1,5 @@
 ### Import Python libraries
-To implement the work I envisioned for the customer segmentation analysis, I installed a few external python libraries. 
+# To implement the work I envisioned for the customer segmentation analysis, I installed a few external python libraries. 
 
 import pandas as pd
 import numpy as np
@@ -13,3 +13,212 @@ from mlxtend.frequent_patterns import apriori, association_rules
 from ydata_profiling import ProfileReport
 import warnings
 warnings.filterwarnings('ignore')
+
+# Load the data
+df = pd.read_csv('shopping_trends_updated.csv')
+
+## 1. Automatic EDA
+print("Running Automated EDA...")
+profile = ProfileReport(df, title="Shopping Trends EDA", explorative=True)
+profile.to_file("shopping_trends_eda.html")
+
+## 2. Data Cleaning
+print("\nCleaning Data...")
+
+# Check for missing values
+print("Missing values before cleaning:")
+print(df.isnull().sum())
+
+# Remove duplicates
+df = df.drop_duplicates()
+
+# Handle missing values (though the dataset appears complete)
+df = df.dropna()
+
+# Remove outliers using IQR for numerical columns
+num_cols = ['Age', 'Purchase Amount (USD)', 'Review Rating', 'Previous Purchases']
+for col in num_cols:
+    Q1 = df[col].quantile(0.25)
+    Q3 = df[col].quantile(0.75)
+    IQR = Q3 - Q1
+    df = df[~((df[col] < (Q1 - 1.5 * IQR)) | (df[col] > (Q3 + 1.5 * IQR)))]
+
+print("\nMissing values after cleaning:")
+print(df.isnull().sum())
+
+## 3. Feature Engineering
+print("\nCreating New Features...")
+
+# Create RFM features (Recency, Frequency, Monetary)
+# Since we don't have transaction dates, we'll use other features as proxies
+
+# Monetary: Average purchase amount per customer
+df['Monetary'] = df['Purchase Amount (USD)']
+
+# Frequency: Frequency of purchases (convert to numerical)
+freq_map = {
+    'Weekly': 7,
+    'Fortnightly': 14,
+    'Bi-Weekly': 14,
+    'Monthly': 30,
+    'Quarterly': 90,
+    'Annually': 365,
+    'Every 3 Months': 90
+}
+df['Frequency'] = df['Frequency of Purchases'].map(freq_map)
+
+# Recency: Inverse of previous purchases (proxy)
+df['Recency'] = 1 / (df['Previous Purchases'] + 1)
+
+# Create customer personality features
+df['Discount_Lover'] = df['Discount Applied'].apply(lambda x: 1 if x == 'Yes' else 0)
+df['Promo_User'] = df['Promo Code Used'].apply(lambda x: 1 if x == 'Yes' else 0)
+df['Loyal_Customer'] = (df['Previous Purchases'] > df['Previous Purchases'].median()).astype(int)
+df['High_Spender'] = (df['Purchase Amount (USD)'] > df['Purchase Amount (USD)'].median()).astype(int)
+df['Frequent_Buyer'] = (df['Frequency'] < df['Frequency'].median()).astype(int)
+
+# Create seasonality features
+df['Season'] = df['Season'].astype('category').cat.codes
+
+# Create payment method features
+payment_dummies = pd.get_dummies(df['Payment Method'], prefix='Payment')
+df = pd.concat([df, payment_dummies], axis=1)
+
+## 4. Customer Segmentation
+print("\nPerforming Customer Segmentation...")
+
+# Select features for clustering
+cluster_features = ['Age', 'Purchase Amount (USD)', 'Review Rating', 'Previous Purchases', 
+                   'Monetary', 'Frequency', 'Recency', 'Discount_Lover', 'Promo_User',
+                   'Loyal_Customer', 'High_Spender', 'Frequent_Buyer']
+
+# Scale the features
+scaler = StandardScaler()
+scaled_features = scaler.fit_transform(df[cluster_features])
+
+# Determine optimal number of clusters using elbow method and silhouette score
+wcss = []
+silhouette_scores = []
+range_values = range(2, 8)
+
+for i in range_values:
+    kmeans = KMeans(n_clusters=i, random_state=42)
+    kmeans.fit(scaled_features)
+    wcss.append(kmeans.inertia_)
+    silhouette_scores.append(silhouette_score(scaled_features, kmeans.labels_))
+
+# Plot elbow curve
+plt.figure(figsize=(10, 5))
+plt.subplot(1, 2, 1)
+plt.plot(range_values, wcss, 'bx-')
+plt.xlabel('Number of Clusters')
+plt.ylabel('WCSS')
+plt.title('Elbow Method')
+
+# Plot silhouette scores
+plt.subplot(1, 2, 2)
+plt.plot(range_values, silhouette_scores, 'bx-')
+plt.xlabel('Number of Clusters')
+plt.ylabel('Silhouette Score')
+plt.title('Silhouette Method')
+plt.tight_layout()
+plt.savefig('cluster_evaluation.png')
+plt.close()
+
+# Based on the plots, choose optimal k (let's assume 4 for this example)
+optimal_k = 4
+kmeans = KMeans(n_clusters=optimal_k, random_state=42)
+df['Cluster'] = kmeans.fit_predict(scaled_features)
+
+# Visualize clusters using PCA
+pca = PCA(n_components=2)
+principal_components = pca.fit_transform(scaled_features)
+df['PCA1'] = principal_components[:, 0]
+df['PCA2'] = principal_components[:, 1]
+
+plt.figure(figsize=(10, 8))
+sns.scatterplot(x='PCA1', y='PCA2', hue='Cluster', data=df, palette='viridis', s=100)
+plt.title('Customer Segments Visualization')
+plt.savefig('customer_segments.png')
+plt.close()
+
+## 5. Analyze clusters
+print("\nAnalyzing Customer Segments...")
+cluster_profiles = df.groupby('Cluster')[cluster_features].mean()
+print("\nCluster Profiles:")
+print(cluster_profiles)
+
+# Add cluster sizes
+cluster_sizes = df['Cluster'].value_counts().sort_index()
+cluster_profiles['Size'] = cluster_sizes.values
+
+# Plot cluster characteristics
+plt.figure(figsize=(12, 8))
+cluster_profiles.drop('Size', axis=1).plot(kind='bar', cmap='viridis')
+plt.title('Cluster Characteristics')
+plt.xticks(rotation=0)
+plt.ylabel('Normalized Value')
+plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
+plt.tight_layout()
+plt.savefig('cluster_characteristics.png')
+plt.close()
+
+## 6. Prepare for Apriori Algorithm (Market Basket Analysis)
+print("\nPreparing for Market Basket Analysis...")
+
+# Create a basket matrix for items purchased
+basket = df.groupby(['Customer ID', 'Item Purchased'])['Item Purchased'].count().unstack().fillna(0)
+basket = basket.applymap(lambda x: 1 if x > 0 else 0)
+
+# Run Apriori algorithm
+frequent_itemsets = apriori(basket, min_support=0.05, use_colnames=True)
+rules = association_rules(frequent_itemsets, metric="lift", min_threshold=1)
+
+# Filter strong rules
+strong_rules = rules[(rules['lift'] > 1.2) & (rules['confidence'] > 0.5)]
+
+print("\nTop Association Rules:")
+print(strong_rules.sort_values('lift', ascending=False).head(10))
+
+## 7. Targeted Marketing Recommendations
+print("\nGenerating Marketing Recommendations...")
+
+# Merge cluster info with original data for analysis
+cluster_item_analysis = df.groupby(['Cluster', 'Item Purchased']).size().reset_index(name='Count')
+top_items_per_cluster = cluster_item_analysis.sort_values(['Cluster', 'Count'], ascending=[True, False]).groupby('Cluster').head(3)
+
+print("\nTop Items by Cluster:")
+print(top_items_per_cluster)
+
+# Create recommendations based on clusters and association rules
+cluster_recommendations = {}
+
+for cluster in range(optimal_k):
+    # Get top items for this cluster
+    cluster_items = top_items_per_cluster[top_items_per_cluster['Cluster'] == cluster]['Item Purchased'].tolist()
+    
+    # Find association rules involving these items
+    relevant_rules = strong_rules[
+        strong_rules['antecedents'].apply(lambda x: any(item in str(x) for item in cluster_items))
+    ]
+    
+    # Get recommended products
+    recommended = set()
+    for _, rule in relevant_rules.iterrows():
+        for item in rule['consequents']:
+            recommended.add(item)
+    
+    cluster_recommendations[cluster] = {
+        'Top Items': cluster_items,
+        'Recommended Products': list(recommended)[:5] if recommended else ["General popular items"]
+    }
+
+print("\nMarketing Recommendations by Cluster:")
+for cluster, recs in cluster_recommendations.items():
+    print(f"\nCluster {cluster}:")
+    print(f"Top Purchases: {', '.join(recs['Top Items'])}")
+    print(f"Recommended Products: {', '.join(recs['Recommended Products'])}")
+
+## 8. Save the processed data
+df.to_csv('processed_shopping_trends.csv', index=False)
+print("\nAnalysis complete. Results saved to files.")
