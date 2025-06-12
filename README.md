@@ -1,5 +1,3 @@
-# portfolio
-
 # DATA ANALYST
 
 ### EDUCATION
@@ -12,3 +10,4 @@ Retention Analysis Project
 Automated Reminders Project
 
 ### PROJECTS
+## Customer Segmentation and Purchase Behaviour Prediction
