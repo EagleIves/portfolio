@@ -5,7 +5,7 @@ Your partner in turning raw data into impactful insights. SQL, Power BI, Python,
 
 
 ## WHO AM I?
-My penchant to make connections and predict outcomes based on historical events led me to Data Analysis. Now, with an in-depth understanding of business processes borne of years of experience working in a large corporation, I have graduated to the ranks of Business Analysis. I am your go-to girl for translating complex technical concepts to the customer-facing commercial teams and conversely, communicating core and niche business needs to technical teams. I use data analysis tools, automation tools, and AI to help businesses mine the gold hiding within their own data and therefore defy their past performance ceilings. Join me on this data adventure!
+My penchant for making connections and predicting outcomes based on historical events led me to Data Analysis. Now, with an in-depth understanding of business processes borne of years of experience working in a large corporation, I have graduated to the ranks of Business Analysis. I am your go-to girl for translating complex technical concepts to the customer-facing commercial teams and conversely, communicating core and niche business needs to technical teams. I use data analysis tools, automation tools, and AI to help businesses mine the gold hiding within their own data and therefore defy their past performance ceilings. Join me on this data adventure!
 
 
 ## EDUCATION
@@ -55,6 +55,16 @@ Next, I identified cluster features that collectively define customer behaviour 
   **Spending habits:** *Purchase Amount, Monetary, High_Spender*   
   **Engagement:** *Frequency, Recency, Loyal_Customer, Frequent_Buyer*   
   **Preferences:** *Discount_Lover, Promo_User*
+
+#### Chapter 3: Clustering 
+I utilized the Elbow/silhouette methods to ensure the selection of optimal clusters. This avoids oversegmentation resulting from the arbitrary choice of __*k*__. Optimal number of clusters identified was __Four__.
+
+<img width="1000" height="500" alt="cluster_evaluation" src="https://github.com/user-attachments/assets/15108341-9227-46d5-93de-4c49be3025ec" />
+
+
+
+Customers are grouped by behavior (spending, loyalty, etc.) using K-means.
+
 
 
 
