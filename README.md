@@ -6,9 +6,7 @@ My penchant to make connections and predict outcomes based on historical events 
 
 ## EDUCATION
 • Data Science and Machine Learning – MIT Institute for Data Systems and Society (Feb 2023)
-
 • Data Protection Course – CIPIT, Strathmore University (Apr 2024)
-
 • Certificate in Data Science, Strathmore University (2022)
 • BBS Financial Engineering, Strathmore University (2019)
 • Advanced Microsoft Excel – Corporate Staffing Services (2019)
