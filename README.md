@@ -53,6 +53,13 @@ My penchant to make connections and predict outcomes based on historical events 
 #### Objective
 My goal was to classify and segment customers based on their historical purchases and ultimately accurately develop a model for predicting their future purchasing behaviour. I wanted the data to tell me where this American shopowner should put their money to get the most out of their investment.
 
+#### Chapter 1: Data Transformation
+Categorical variables such as "Season" and "Payment Method" are converted to a numerical format for clustering. Machine learning models work better with numerical inputs, so I needed to encode these categories as numbers.
+
+Using One-hot encoding, I converted the "Payment Method" column into binary columns (0/1) for model compatibility. This helps the model detect patterns like "Cluster 0 prefers Credit Card payments."
+
+#### Chapter 1: Feature Selection
+
 
 
 
