@@ -8,15 +8,10 @@ My penchant to make connections and predict outcomes based on historical events 
 
 ## EDUCATION
 • Data Science and Machine Learning – MIT Institute for Data Systems and Society (Feb 2023)
-
 • Data Protection Course – CIPIT, Strathmore University (Apr 2024)
-
 • Certificate in Data Science, Strathmore University (2022)
-
 • BBS Financial Engineering, Strathmore University (2019)
-
 • Advanced Microsoft Excel – Corporate Staffing Services (2019)
-
 • Data Analytics on Python – Takenmind Global (2019)
 
 
@@ -24,27 +19,20 @@ My penchant to make connections and predict outcomes based on historical events 
 ## WORK EXPERIENCE
 
 ### Business Analyst @ Simba Corporation (March 2022 - Present)
-
 • Revolutionized commercial reporting by developing real-time Power BI dashboards, enabling data-driven decisions across leadership teams.
-
 • Created predictive algorithms for service date reminders, boosting service sales by 3%.
-
 • Implemented a Work in Progress tracking system and dashboard that created first-time visibility of aged service orders in the workshop, thereby improving closure rates by 8%.
 
 
 ### Data Protection Officer @ Simba Corporation (October 2024 - Present)
 • Formed a Data Management Committee to champion data protection practices across departments.
-
 • Designed and implemented staff training programs on data privacy and compliance.
-
 • Developed company-wide data governance policies to standardize information management.
 
 
 ### Data Analyst ~ Self-Employed (August 2021 - February 2022)
 • Created automated financial dashboards in Excel using advanced formulas and data analysis tool packs.
-
 • Conducted statistical analyses using SPSS for client surveys and reports.
-
 • Delivered client presentations that turned analytical findings into actionable recommendations.
 
 
