@@ -1,3 +1,5 @@
+<div style="text-align: justify; text-justify: inter-word;">
+
 # HELLO, I'M IVY KARANJA
 Your partner in turning raw data into impactful insights. SQL, Power BI, Python, and Advanced Excel are my weapons of choice. Let's get cooking!
 
@@ -7,27 +9,27 @@ My penchant to make connections and predict outcomes based on historical events 
 
 
 ## EDUCATION
-• Data Science and Machine Learning – MIT Institute for Data Systems and Society (Feb 2023)
-• Data Protection Course – CIPIT, Strathmore University (Apr 2024)
-• Certificate in Data Science, Strathmore University (2022)
-• BBS Financial Engineering, Strathmore University (2019)
-• Advanced Microsoft Excel – Corporate Staffing Services (2019)
-• Data Analytics on Python – Takenmind Global (2019)
+• Data Science and Machine Learning – MIT Institute for Data Systems and Society (Feb 2023)   
+• Data Protection Course – CIPIT, Strathmore University (Apr 2024)   
+• Certificate in Data Science, Strathmore University (2022)   
+• BBS Financial Engineering, Strathmore University (2019)  
+• Advanced Microsoft Excel – Corporate Staffing Services (2019)   
+• Data Analytics on Python – Takenmind Global (2019)   
 
 
 
 ## WORK EXPERIENCE
 
 ### Business Analyst @ Simba Corporation (March 2022 - Present)
-• Revolutionized commercial reporting by developing real-time Power BI dashboards, enabling data-driven decisions across leadership teams.
-• Created predictive algorithms for service date reminders, boosting service sales by 3%.
-• Implemented a Work in Progress tracking system and dashboard that created first-time visibility of aged service orders in the workshop, thereby improving closure rates by 8%.
+• Revolutionized commercial reporting by developing real-time Power BI dashboards, enabling data-driven decisions across leadership teams.   
+• Created predictive algorithms for service date reminders, boosting service sales by 3%.   
+• Implemented a Work in Progress tracking system and dashboard that created first-time visibility of aged service orders in the workshop, thereby improving closure rates by 8%.   
 
 
 ### Data Protection Officer @ Simba Corporation (October 2024 - Present)
-• Formed a Data Management Committee to champion data protection practices across departments.
-• Designed and implemented staff training programs on data privacy and compliance.
-• Developed company-wide data governance policies to standardize information management.
+• Formed a Data Management Committee to champion data protection practices across departments.   
+• Designed and implemented staff training programs on data privacy and compliance.   
+• Developed company-wide data governance policies to standardize information management.   
 
 
 ### Data Analyst ~ Self-Employed (August 2021 - February 2022)
@@ -46,7 +48,18 @@ Categorical variables such as "Season" and "Payment Method" are converted to a n
 
 Using One-hot encoding, I converted the "Payment Method" column into binary columns (0/1) for model compatibility. This helps the model detect patterns like "Cluster 0 prefers Credit Card payments."
 
-#### Chapter 1: Feature Selection
+#### Chapter 2: Feature Selection for Clustering
+Next, I identified cluster features that collectively define customer behaviour in the below categories. This ensures clustering is based on meaningful behavioral traits rather than irrelevant columns (e.g., *Customer ID*).
+
+  **Demographics:** *Age*   
+  **Spending habits:** *Purchase Amount, Monetary, High_Spender*   
+  **Engagement:** *Frequency, Recency, Loyal_Customer, Frequent_Buyer*   
+  **Preferences:** *Discount_Lover, Promo_User*
+
+
+
+</div>
+
 
 
 
