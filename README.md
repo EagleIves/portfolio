@@ -50,3 +50,10 @@ My penchant to make connections and predict outcomes based on historical events 
 
 ## PROJECTS
 ### Customer Segmentation and Purchase Behaviour Prediction
+#### Objective
+My goal was to classify and segment customers based on their historical purchases and ultimately accurately develop a model for predicting their future purchasing behaviour. I wanted the data to tell me where this American shopowner should put their money to get the most out of their investment.
+
+
+
+
+
