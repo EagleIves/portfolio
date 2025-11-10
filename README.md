@@ -39,7 +39,7 @@ My penchant for making connections and predicting outcomes based on historical e
 
 
 ## PROJECTS
-### Customer Segmentation and Purchase Behaviour Prediction
+### PROJECT 1: Customer Segmentation and Purchase Behaviour Prediction
 #### Objective
 My goal was to classify and segment customers based on their historical purchases and ultimately accurately develop a model for predicting their future purchasing behaviour. I wanted the data to tell me where this American shopowner should put their money to get the most out of their investment.
 
@@ -57,13 +57,14 @@ Next, I identified cluster features that collectively define customer behaviour 
   **Preferences:** *Discount_Lover, Promo_User*
 
 #### Chapter 3: Clustering 
-I utilized the Elbow/silhouette methods to ensure the selection of optimal clusters. This avoids oversegmentation resulting from the arbitrary choice of __*k*__. Optimal number of clusters identified was __Four__.
+I utilized the Elbow/silhouette methods to ensure the selection of optimal clusters. This avoids oversegmentation resulting from the arbitrary choice of __*k*__. Optimal number of clusters identified was __Four(4)__.
 
-<img width="1000" height="500" alt="cluster_evaluation" src="https://github.com/user-attachments/assets/15108341-9227-46d5-93de-4c49be3025ec" />
+<img width="700" height="500" alt="cluster_evaluation" src="https://github.com/user-attachments/assets/15108341-9227-46d5-93de-4c49be3025ec" />
 
+I then grouped the customers by behavior (spending, loyalty, etc.) using K-means clustering; a simple, efficient algorithm for partitioning data into __*k*__ clusters. I did this in Python by using the *fit_predict()* function, which assigns each customer to a cluster based on scaled features.
 
-
-Customers are grouped by behavior (spending, loyalty, etc.) using K-means.
+Using Principal Component Analysis (PCA), I visualized the clusters generated in a 2D plot to establish any overlaps between clusters.
+<img width="800" height="500" alt="customer_segments" src="https://github.com/user-attachments/assets/af359af2-25c1-4af2-a940-300fd541f7ca" />
 
 
 
