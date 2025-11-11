@@ -29,7 +29,7 @@ My penchant for making connections and predicting outcomes based on historical e
 ### Data Protection Officer @ Simba Corporation (October 2024 - Present)
 • Formed a Data Management Committee to champion data protection practices across departments.   
 • Designed and implemented staff training programs on data privacy and compliance.   
-• Developed company-wide data governance policies to standardize information management.   
+• Developed company-wide data governance policies to standardise information management.   
 
 
 ### Data Analyst ~ Self-Employed (August 2021 - February 2022)
@@ -92,12 +92,12 @@ __4. Cluster 3: Frequent Essentials Buyers__
 
 #### CHAPTER 4: ASSOCIATION RULES MINING
 
-To find frequently co-purchased items, I employed the Apriori Algorithm, a model often used to discover relationships and dependencies between items in large transactional datasets. I used the following metrics within the algorithm in Python:
+To find frequently co-purchased items, I employed the Apriori Algorithm, a model often used to discover relationships and dependencies between items in large transactional datasets. I used the following metrics within the algorithm in Python:   
 __Support:__ How frequently itemset appears (min 5% here).   
 __Lift:__ Measures dependence (lift > 1.2 means likely together).   
 __Confidence:__ Probability of buying Y given X (min 50% here).   
 
-The algorithm yielded a few association rule highlights as below:
+The algorithm yielded a few association rule highlights as below:   
 • Customers who buy Coats often buy Gloves (lift 1.8)   
 • Handbag purchases are frequently paired with jewellery (lift 1.7)   
 • Pants purchases often lead to Shirt purchases (lift 1.5)   
@@ -108,7 +108,7 @@ To generate cluster-specific recommendations, I sought to define the top purchas
 
 __Marketing Strategy Recommendations:__
 
-__1. For High-Value Customers (Cluster 0):__
+__1. For High-Value Customers (Cluster 0):__   
 • Target with premium product launches   
 • Offer exclusive early access to new collections   
 • Bundle complementary high-margin items   
@@ -123,13 +123,14 @@ __3. For Luxury Buyers (Cluster 2):__
 • Highlight quality and exclusivity   
 • Offer personalised shopping experiences   
 
-__4. For Frequent Buyers (Cluster 3):__
+__4. For Frequent Buyers (Cluster 3):__   
 • Implement subscription or loyalty programs   
 • Offer replenishment reminders for essentials   
 • Provide volume discounts   
 
 
-
+#### CONCLUSION
+In this coding journey, customer secrets for this clothing store have been revealed. Now Mr Proprietor knows exactly how to target his customers and have them buying things they never would before, all because of a bit of analysis. Don't you just love data?!
 
 
 
