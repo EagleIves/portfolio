@@ -39,7 +39,7 @@ My penchant for making connections and predicting outcomes based on historical e
 
 
 ## PROJECTS
-### PROJECT 1: Customer Segmentation and Purchase Behaviour Prediction
+### <ins>PROJECT 1: Customer Segmentation and Purchase Behaviour Prediction<ins>
 #### OBJECTIVE
 My goal was to classify and segment customers based on their historical purchases and ultimately accurately develop a model for predicting their future purchasing behaviour. I wanted the data to tell me where this American shopowner should put their money to get the most out of their investment.
 
@@ -131,6 +131,74 @@ __4. For Frequent Buyers (Cluster 3):__
 
 #### CONCLUSION
 In this coding journey, customer secrets for this clothing store have been revealed. Now Mr Proprietor knows exactly how to target his customers and have them buying things they never would before, all because of a bit of analysis. Don't you just love data?!
+
+
+### <ins>PROJECT 2: HR Analysis in Power BI<ins>
+
+### Objective   
+The Objective was to create an HR analysis dashboard in Power BI, where HR officers can gain quick insights into a wide array of staff statistics, including headcount, leave utilisation, employee turnover, time and attendance, and more. Imagine a one-stop shop that answers all your staff-related questions. The dashboard aims to empower decision-makers with actionable information for effective workforce management, retention, succession planning, and overall employee satisfaction.
+
+### Overview Page      
+The Overview page of the report acts as a brief preview of the details to be revealed in the subsequent report pages. This is especially useful for upper management consumption, as it allows them to gain a high-level understanding of their workforce.
+The Overview page touches on headcount, staff movement, demographics, leave statistics, location and the makeup of staff.
+
+<img width="870" height="489" alt="image" src="https://github.com/user-attachments/assets/09e6613b-673a-4abe-a0a9-bfc1e5a83490" />   
+
+### Headcount & Diversity      
+The Headcount & Diversity page delves deeper into the defining characteristics of the workforce, illuminating key details such as the gender makeup, the percentage of the workforce that is unionised, the average tenure of employees and the period to retirement for older workers. These statistics may be drilled down further to filters of Division, Department, Functional Unit, Cadre, Job Category, Location and even Date of Joining the company.   
+Notably, the workforce is mostly made up of men. This may lead to an important discussion on women's empowerment and the working environment in the Buffalo corporation. The majority of staff fall in the category of tenures at Buffalo of less than 5 years; this may prompt a discussion on the high turnover rate and measures that may be taken to improve employee satisfaction. 
+
+<img width="874" height="490" alt="image" src="https://github.com/user-attachments/assets/5d25113d-b452-4f4c-90f6-d5758c4b8758" />   
+
+### Annual Leave Summary    
+Created Key Performance Indicators for leave liability, leave utilisation rate and end-of-year leave balance target. KPIs were calculated on a prorated basis; this means that leave statistics may be viewed up to the period under review, and not purely with a view to leave days entitled for the whole year. The slicers available allow for a deeper dive per division, department, location, etc.   
+
+__*Key Insights:*__   
+•	Leave utilisation rate steadily increases as the year wears on, whereas the prorated average leave liability per employee remains stable, even increasing at times. This indicates that while most employees utilise their allotted leave days as expected, there are a select few who utilise few to none, and thereby inflate the average leave liability.   
+•	The specific individuals contributing to the unchanging average leave liability may be identified and subsequently followed up on in the table dubbed “Prorated Leave Balances by Name”. Simply selecting the Prorated Balance column label will sort the names in either ascending or descending order.   
+•	By September 2025, the prorated leave utilisation rate was at 47% while the end-year target is 75%. With only 3 months left until December, urgent action must be taken by the HR department to minimise potential leave liabilities payable.   
+
+<img width="876" height="491" alt="image" src="https://github.com/user-attachments/assets/bbeec9cb-57fb-453c-8394-d3920c781bd3" />   
+
+### Staff Movement Summary   
+A turnover analysis led to the development of KPIs such as the number of new entrants, exits, internal hires, average tenure of active employees and average tenure of inactive employees. I also established the distribution of reasons for exits over the last couple of years and the designation of exited employees. A trend analysis revealed fluctuations in entries and exits of staff, with exits doubling the number of entrants. This may point to a company strategy to reduce labour.   
+
+<img width="876" height="489" alt="image" src="https://github.com/user-attachments/assets/2876dadc-32c9-481c-b6b5-cba725b266e4" />
+
+### Time & Attendance   
+The Time & Attendance page seeks to track the attendance habits of staff who work full-time from the office. Created KPIs for average time-in, average time-out, average work hours, attendance rate and standard workdays. All KPIs are dependent on the shift in question. The shift must be selected for the cards to reveal values; otherwise, the meaning would be distorted if calculated across several shifts.    
+Additional considerations were made to ensure the accuracy of the report, namely: Approved leave days and applied leave days awaiting approval. This analysis required the integration of the attendance dataset with the leave dataset and, therefore, the setting up of necessary relationships between the two.    
+The attendance rates were displayed by department to quickly pick out compliant and non-compliant employees. The departments may be expanded to include the individual employees in the visual by selecting the plus signs to the left of the department names.
+
+<img width="876" height="492" alt="image" src="https://github.com/user-attachments/assets/27ba4a16-6c4d-40dc-ab15-a949e589fcaa" />    
+
+### Goal Setting Status   
+This page was created to track the progress of the performance appraisal process throughout the company as conducted within the Human Resource Management System (HRM). The same may also be utilised by department heads to ensure the completion of the exercise by their teams by employing row-level security so that they are only able to see their department’s statistics.
+
+__*Key Insights:*__  
+•	Of the 556 staff members employed by Buffalo Corporation, only 478 were enrolled to be appraised within the HRM, while 78 were exempted.   
+•	At the individual self-evaluation level, 91% of staff had submitted their evaluation.   
+•	90% of supervisors had submitted the evaluations of their subordinates, while 87% of reviewers had submitted their evaluations.   
+•	Overall, 91% of the performance appraisal exercise was completed.   
+
+<img width="872" height="489" alt="image" src="https://github.com/user-attachments/assets/b4e2a1d7-a8c4-411d-b2a1-28c50961650e" />
+
+### End-of-Year Goal Review Evaluation    
+To analyse how well employees have achieved the goals they set at the beginning of the year, the End-of-Year Goal Review Evaluation page was created.   
+
+The analysis revealed that, on average, all employees rated themselves and their subordinates between 2 and 4, with most employees falling at the midpoint of 3. A deeper dive by department highlights high-performing and underperforming departments.   
+
+Filtering by division showed that the Motors division skewed towards lower ratings of 2 and 3, while the Hospitality division gave higher ratings of 3 and 4.   
+
+<img width="876" height="493" alt="image" src="https://github.com/user-attachments/assets/0acf13c3-44ab-4903-a802-8877df13599d" />
+
+<img width="430" height="300" alt="image" src="https://github.com/user-attachments/assets/8bc8c451-008a-4888-888a-c4876bdc0fc9" /> <img width="430" height="300" alt="image" src="https://github.com/user-attachments/assets/9cb616de-a475-4721-a617-583023f2bc6a" />
+
+
+
+
+
+
 
 
 
