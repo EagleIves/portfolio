@@ -1,4 +1,4 @@
-<div style="text-align: justify; text-justify: inter-word;">
+<img width="1879" height="147" alt="image" src="https://github.com/user-attachments/assets/48a49cae-6726-40a2-b5db-74a7e3b42764" /><div style="text-align: justify; text-justify: inter-word;">
 
 # HELLO, I'M IVY KARANJA
 Your partner in turning raw data into impactful insights. SQL, Power BI, Python, and Advanced Excel are my weapons of choice. Let's get cooking!
@@ -39,7 +39,7 @@ My penchant for making connections and predicting outcomes based on historical e
 
 
 ## PROJECTS
-### <ins>PROJECT 1: Customer Segmentation and Purchase Behaviour Prediction<ins>
+### <ins>PROJECT 1: Customer Segmentation and Purchase Behaviour Prediction (Python) <ins>
 #### OBJECTIVE
 My goal was to classify and segment customers based on their historical purchases and ultimately accurately develop a model for predicting their future purchasing behaviour. I wanted the data to tell me where this American shopowner should put their money to get the most out of their investment.
 
@@ -133,7 +133,7 @@ __4. For Frequent Buyers (Cluster 3):__
 In this coding journey, customer secrets for this clothing store have been revealed. Now Mr Proprietor knows exactly how to target his customers and have them buying things they never would before, all because of a bit of analysis. Don't you just love data?!
 
 
-### <ins>PROJECT 2: HR Analysis in Power BI<ins>
+### <ins>PROJECT 2: HR Analytics (Power BI) <ins>
 
 ### Objective   
 The Objective was to create an HR analysis dashboard in Power BI, where HR officers can gain quick insights into a wide array of staff statistics, including headcount, leave utilisation, employee turnover, time and attendance, and more. Imagine a one-stop shop that answers all your staff-related questions. The dashboard aims to empower decision-makers with actionable information for effective workforce management, retention, succession planning, and overall employee satisfaction.
@@ -192,10 +192,51 @@ Filtering by division showed that the Motors division skewed towards lower ratin
 
 <img width="876" height="493" alt="image" src="https://github.com/user-attachments/assets/0acf13c3-44ab-4903-a802-8877df13599d" />
 
-<img width="430" height="300" alt="image" src="https://github.com/user-attachments/assets/8bc8c451-008a-4888-888a-c4876bdc0fc9" /> <img width="430" height="300" alt="image" src="https://github.com/user-attachments/assets/9cb616de-a475-4721-a617-583023f2bc6a" />
+<img width="430" height="300" alt="image" src="https://github.com/user-attachments/assets/8bc8c451-008a-4888-888a-c4876bdc0fc9" /> <img width="430" height="300" alt="image" src="https://github.com/user-attachments/assets/9cb616de-a475-4721-a617-583023f2bc6a" />    
+ 
 
+### <ins>PROJECT 3: Dynamic Work Organiser (Excel & VBA) <ins>
 
+### What is it?   
 
+Here we have a simple to do list tracker and dashboard. Have a view of what tasks are still pending, who’s responsible and the deadlines that are coming due.   
+
+This document utilizes several advanced excel tools and features namely: visual basic macros, dynamic named ranges, conditional formatting, sheet navigation buttons among others. Update your list of completed tasks with the click of a button and see your progress.   
+
+__SEE HOW IT WORKS!__
+
+### Features & Tools
+
+__1. INTERFACE__
+
+• The Interface of the Work Organizer summarizes all tasks according to their deadline and current status.    
+• It also provides for page navigation buttons to the full To Do List, the Completed Tasks and all existing standardized list entries.    
+• This page automatically updates overtime and to reflect any changing work statuses.   
+
+<img width="894" height="428" alt="image" src="https://github.com/user-attachments/assets/348fffa7-b0b5-4181-9a23-1506c03a8e59" />    
+
+__2. TO DO LIST__   
+
+• The second page of the Organizer details all the ongoing workstreams and tasks to be completed.   
+• Tasks due this week are highlighted amber while overdue tasks are highlighted in red to alert the responsible persons.   
+• Tasks marked as complete are copied in the “Completed” sheet to archive them.   
+
+<img width="894" height="431" alt="image" src="https://github.com/user-attachments/assets/ebc13527-ccbc-44a4-80e6-90b0b61ed2ad" />   
+
+__3. COMPLETED LIST__    
+
+• As earlier stated, Tasks marked as complete are copied in the “Completed” sheet to archive them.    
+• This is an automatic process that is triggered by changing the status of a task from “In progress” to “Completed”.   
+• There is also a Sort button that arranges the tasks in ascending order depending on their stated deadline.    
+
+<img width="987" height="151" alt="image" src="https://github.com/user-attachments/assets/bc79e4bd-3894-4615-8d95-2dfc373568c9" />
+
+__4. LISTS PAGE__   
+
+• The last page hosts some of the named ranges and data validation lists for any necessary amendments.   
+• Any additions to the list are automatically added to the saved named ranges and data validation lists   
+
+<img width="918" height="422" alt="image" src="https://github.com/user-attachments/assets/f8996626-dad8-4eb4-863b-4750b8b641e2" />
 
 
 
