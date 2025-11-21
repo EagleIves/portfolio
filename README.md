@@ -132,6 +132,8 @@ __4. For Frequent Buyers (Cluster 3):__
 #### CONCLUSION
 In this coding journey, customer secrets for this clothing store have been revealed. Now Mr Proprietor knows exactly how to target his customers and have them buying things they never would before, all because of a bit of analysis. Don't you just love data?!
 
+[VIEW THE CODE!](https://github.com/EagleIves/portfolio/blob/main/Shopping_trends_Python_code)   
+
 
 ### <ins>PROJECT 2: HR Analytics (Power BI) <ins>
 
