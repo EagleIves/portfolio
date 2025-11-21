@@ -49,7 +49,7 @@ Categorical variables such as "Season" and "Payment Method" are converted to a n
 Using One-hot encoding, I converted the "Payment Method" column into binary columns (0/1) for model compatibility. This helps the model detect patterns like "Cluster 0 prefers Credit Card payments."
 
 #### CHAPTER 2: FEATURE SELECTION FOR CLUSTERING
-Next, I identified cluster features that collectively define customer behaviour in the below categories. This ensures clustering is based on meaningful behavioral traits rather than irrelevant columns (e.g., *Customer ID*).
+Next, I identified cluster features that collectively define customer behaviour in the following categories. This ensures clustering is based on meaningful behavioural traits rather than irrelevant columns (e.g., *Customer ID*).
 
   **Demographics:** *Age*   
   **Spending habits:** *Purchase Amount, Monetary, High_Spender*   
@@ -138,8 +138,7 @@ In this coding journey, customer secrets for this clothing store have been revea
 ### Objective   
 The Objective was to create an HR analysis dashboard in Power BI, where HR officers can gain quick insights into a wide array of staff statistics, including headcount, leave utilisation, employee turnover, time and attendance, and more. Imagine a one-stop shop that answers all your staff-related questions. The dashboard aims to empower decision-makers with actionable information for effective workforce management, retention, succession planning, and overall employee satisfaction.
 
-__SEE THE REPORT!__
-https://github.com/EagleIves/portfolio/blob/main/HR%20Analytics%20Report.pbix    
+__[SEE THE REPORT!](https://github.com/EagleIves/portfolio/blob/main/HR%20Analytics%20Report.pbix)__       
 
 ### Overview Page      
 The Overview page of the report acts as a brief preview of the details to be revealed in the subsequent report pages. This is especially useful for upper management consumption, as it allows them to gain a high-level understanding of their workforce.
@@ -202,33 +201,34 @@ Filtering by division showed that the Motors division skewed towards lower ratin
 
 ### What is it?   
 
-Here we have a simple to do list tracker and dashboard. Have a view of what tasks are still pending, who’s responsible and the deadlines that are coming due.   
+Here we have a simple to-do list tracker and dashboard. Have a view of what tasks are still pending, who’s responsible and the deadlines that are coming due.   
 
-This document utilizes several advanced excel tools and features namely: visual basic macros, dynamic named ranges, conditional formatting, sheet navigation buttons among others. Update your list of completed tasks with the click of a button and see your progress.   
+This document utilises several advanced Excel tools and features, namely: Visual Basic macros, dynamic named ranges, conditional formatting, sheet navigation buttons, among others. Update your list of completed tasks with the click of a button and see your progress.   
 
-__SEE HOW IT WORKS!__
+__[SEE HOW IT WORKS!](https://github.com/EagleIves/portfolio/blob/main/Dynamic%20Work%20Organizer.xlsm)__      
+
 
 ### Features & Tools
 
 __1. INTERFACE__
 
-• The Interface of the Work Organizer summarizes all tasks according to their deadline and current status.    
-• It also provides for page navigation buttons to the full To Do List, the Completed Tasks and all existing standardized list entries.    
-• This page automatically updates overtime and to reflect any changing work statuses.   
+• The Interface of the Work Organiser summarises all tasks according to their deadline and current status.    
+• It also provides for page navigation buttons to the full To Do List, the Completed Tasks and all existing standardised list entries.    
+• This page automatically updates over time to reflect any changes in work statuses.   
 
 <img width="894" height="428" alt="image" src="https://github.com/user-attachments/assets/348fffa7-b0b5-4181-9a23-1506c03a8e59" />    
 
 __2. TO DO LIST__   
 
-• The second page of the Organizer details all the ongoing workstreams and tasks to be completed.   
-• Tasks due this week are highlighted amber while overdue tasks are highlighted in red to alert the responsible persons.   
-• Tasks marked as complete are copied in the “Completed” sheet to archive them.   
+• The second page of the Organiser details all the ongoing workstreams and tasks to be completed.   
+• Tasks due this week are highlighted in amber, while overdue tasks are highlighted in red to alert the responsible persons.   
+• Tasks marked as complete are copied to the “Completed” sheet to archive them.   
 
 <img width="894" height="431" alt="image" src="https://github.com/user-attachments/assets/ebc13527-ccbc-44a4-80e6-90b0b61ed2ad" />   
 
 __3. COMPLETED LIST__    
 
-• As earlier stated, Tasks marked as complete are copied in the “Completed” sheet to archive them.    
+• As earlier stated, Tasks marked as complete are copied to the “Completed” sheet to archive them.    
 • This is an automatic process that is triggered by changing the status of a task from “In progress” to “Completed”.   
 • There is also a Sort button that arranges the tasks in ascending order depending on their stated deadline.    
 
