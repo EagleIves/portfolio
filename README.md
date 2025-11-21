@@ -132,14 +132,14 @@ __4. For Frequent Buyers (Cluster 3):__
 #### CONCLUSION
 In this coding journey, customer secrets for this clothing store have been revealed. Now Mr Proprietor knows exactly how to target his customers and have them buying things they never would before, all because of a bit of analysis. Don't you just love data?!
 
-__SEE THE REPORT!__
-https://github.com/EagleIves/portfolio/blob/main/HR%20Analytics%20Report.pbix    
-
 
 ### <ins>PROJECT 2: HR Analytics (Power BI) <ins>
 
 ### Objective   
 The Objective was to create an HR analysis dashboard in Power BI, where HR officers can gain quick insights into a wide array of staff statistics, including headcount, leave utilisation, employee turnover, time and attendance, and more. Imagine a one-stop shop that answers all your staff-related questions. The dashboard aims to empower decision-makers with actionable information for effective workforce management, retention, succession planning, and overall employee satisfaction.
+
+__SEE THE REPORT!__
+https://github.com/EagleIves/portfolio/blob/main/HR%20Analytics%20Report.pbix    
 
 ### Overview Page      
 The Overview page of the report acts as a brief preview of the details to be revealed in the subsequent report pages. This is especially useful for upper management consumption, as it allows them to gain a high-level understanding of their workforce.
